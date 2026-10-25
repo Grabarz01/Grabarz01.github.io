@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formularz</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body   >
+<h1> Formularz </h1>
+
+<div class="container">	
+<form action="formularz.html" method="GET">
+	<div>
+		<label for="username">Imię: </label>
+		<input id="username" name="username" type="text">
+	</div><div>
+		<label for="surname">Nazwisko: </label>
+		<input id="surname" name="surname" type="text">
+</div><div>
+		<label for="street">Ulica: </label>
+		<input id="street" name="street" type="text">
+</div><div>
+		<label for="city">Miasto:</label>
+		<input id="city" name="city" type="text">
+</div><div>
+		<label for="password">Hasło: </label>
+		<input id="password" name="password" type="password">
+</div><div>
+		<label for="birthday">Data urodzenia: </label>
+		<input type="date" id="birthday" name="birthday">
+</div><div>
+		<label for="phone">Nr telefonu: </label>
+		<input type="tel" name="phone" id="phone">
+</div><div>
+	<label for="province">Województwo: </label>
+	<select id="province" name="province" required>
+		<option value="" disabled selected hidden></option>
+		<option value="podlaskie">podlaskie</option>
+		<option value="mazowieckie">mazowieckie</option>
+		<option value="łódzkie">łódzkie</option>
+		<option value="wielkopolskie">wielkopolskie</option>
+	</select>
+</div><div>
+	<label for="email">E-mail: </label>
+	<input type="email" id="email" name="email">
+</div><div>
+	<label for="dlicence">Prawo jazdy:</label>
+	<select id="dlicence" name="dlicence">
+		<option value="" disabled selected hidden></option> 
+		<option value="tak">Tak</option>
+		<option value="nie">Nie</option>
+	</select>
+</div><div>
+	<label for="comment">Uwagi:</label>
+	<textarea id="comment" name="comment" rows="4" cols="30"></textarea><br>
+</div>
+
+	<button type="submit" >Wyślij formularz</button>
+</form></div>
+	
+
+</body>
+</html>
