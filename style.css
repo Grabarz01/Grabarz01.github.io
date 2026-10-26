@@ -7,11 +7,7 @@ body{
     justify-content: center;
     max-width: 500px;
     margin: 0 auto;
-
-
 }
-
-
 
 img{
     border-top-left-radius:10px;
@@ -60,7 +56,6 @@ img{
 .rows{
     display: flex;
     flex-direction: row;
-    
 
 }
 

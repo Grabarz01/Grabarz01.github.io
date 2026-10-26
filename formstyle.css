@@ -1,6 +1,6 @@
 /* Reset podstawowych styli */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /*wlicza padding i border do deklarowanej szerokości*/
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* vh procent wysokości okna przeglądarki*/
     padding: 20px;
 }
 
@@ -84,7 +84,7 @@ textarea:focus {
 }
 
 textarea {
-    resize: vertical;
+    resize: vertical; /*rozszerzanie pola góra-dół*/
 }
 
 /* Przycisk wysyłania */
@@ -97,7 +97,7 @@ textarea {
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer; /*okresla wskaźnik*/
     transition: background-color 0.3s ease, transform 0.1s ease;
     margin-top: 10px;
 }
@@ -110,14 +110,3 @@ textarea {
     transform: scale(0.99);
 }
 
-/* Responsywność dla urządzeń mobilnych */
-@media (max-width: 480px) {
-    form {
-        grid-template-columns: 1fr;
-    }
-    
-    .form-group.full-width,
-    .submit-btn {
-        grid-column: span 1;
-    }
-}
