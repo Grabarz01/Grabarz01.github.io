@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 1 - 4 Rzędy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Wspólny styl dla bloków */
+    .col {
+      background-color: #3b82f6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* -----------------------------------
+       Rząd 1: 2 kolumny (50% / 50%)
+    ----------------------------------- */
+    .row-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    /* -----------------------------------
+       Rząd 2: 1 kolumna (100%)
+    ----------------------------------- */
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    /* -----------------------------------
+       Rząd 3: 4 kolumny (25% / 25% / 25% / 25%)
+    ----------------------------------- */
+    .row-3 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    /* -----------------------------------
+       Rząd 4: 3 kolumny (50% / 25% / 25%)
+    ----------------------------------- */
+    .row-4 {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr; /* 2fr to 50%, 1fr i 1fr to po 25% */
+      gap: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Rząd 1: 2 kolumny (50 / 50) -->
+    <div class="row-1">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus. (50%)</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus. (50%)</div>
+    </div>
+
+    <!-- Rząd 2: 1 kolumna (100) -->
+    <div class="row-2">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus. (100%)</div>
+    </div>
+
+    <!-- Rząd 3: 4 kolumny (25 / 25 / 25 / 25) -->
+    <div class="row-3">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.</div>
+    </div>
+
+    <!-- Rząd 4: 3 kolumny (50 / 25 / 25) -->
+    <div class="row-4">
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus. (50%)</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus. (25%)</div>
+      <div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus. (25%)</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

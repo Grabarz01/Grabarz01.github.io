@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 2 - 1, 2, 3, 4 Kolumny</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Wspólny styl dla bloków */
+    .col {
+      background-color: #0284c7;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .col h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .col p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* -----------------------------------
+       Rząd 1: 1 kolumna (100%)
+    ----------------------------------- */
+    .row-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    /* -----------------------------------
+       Rząd 2: 2 równe kolumny (50% / 50%)
+    ----------------------------------- */
+    .row-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    /* -----------------------------------
+       Rząd 3: 3 równe kolumny (33.3% / 33.3% / 33.3%)
+    ----------------------------------- */
+    .row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    /* -----------------------------------
+       Rząd 4: 4 równe kolumny (25% każdy)
+    ----------------------------------- */
+    .row-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Rząd 1: 1 kolumna -->
+    <div class="row-1">
+      <div class="col">
+        <h3>Rząd 1 — 1 kolumna</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Przykładowy tekst w pojedynczym bloku zajmującym pełną szerokość dostępnej przestrzeni w pierwszym wierszu.</p>
+      </div>
+    </div>
+
+    <!-- Rząd 2: 2 kolumny -->
+    <div class="row-2">
+      <div class="col">
+        <h3>Rząd 2 — Kolumna 1 z 2</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Tekst opisowy dla pierwszej z dwóch równych kolumn w drugim wierszu.</p>
+      </div>
+      <div class="col">
+        <h3>Rząd 2 — Kolumna 2 z 2</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Tekst opisowy dla drugiej z dwóch równych kolumn w drugim wierszu.</p>
+      </div>
+    </div>
+
+    <!-- Rząd 3: 3 kolumny -->
+    <div class="row-3">
+      <div class="col">
+        <h3>Rząd 3 — Kol 1</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Pierwszy blok w podziale na trzy równe części.</p>
+      </div>
+      <div class="col">
+        <h3>Rząd 3 — Kol 2</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Drugi blok w podziale na trzy równe części.</p>
+      </div>
+      <div class="col">
+        <h3>Rząd 3 — Kol 3</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Trzeci blok w podziale na trzy równe części.</p>
+      </div>
+    </div>
+
+    <!-- Rząd 4: 4 kolumny -->
+    <div class="row-4">
+      <div class="col">
+        <h3>Rząd 4 — Kol 1</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Pierwsza z czterech kolumn.</p>
+      </div>
+      <div class="col">
+        <h3>Rząd 4 — Kol 2</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Druga z czterech kolumn.</p>
+      </div>
+      <div class="col">
+        <h3>Rząd 4 — Kol 3</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Trzecia z czterech kolumn.</p>
+      </div>
+      <div class="col">
+        <h3>Rząd 4 — Kol 4</h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa urna, volutpat vitae lorem eget, feugiat luctus dui. Quisque sed interdum dui, sed commodo est. Aliquam non leo felis. Nunc cursus ornare est, volutpat viverra arcu auctor at. Donec pulvinar massa nec est facilisis porttitor. Nullam nec neque eu nisi feugiat eleifend. Ut imperdiet ut dui quis aliquet. Praesent tristique malesuada fermentum. Maecenas non aliquam elit. Aliquam et dolor facilisis, ullamcorper purus vehicula, tincidunt risus.Czwarta z czterech kolumn.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

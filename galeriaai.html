@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 3 - Galeria 3x3</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 równe kolumny */
+      gap: 20px; /* odstęp między kartami */
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Karta pojedynczego elementu galerii */
+    .gallery-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Kontener zdjęcia */
+    .gallery-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; /* Zachowuje proporcje zdjęcia i wypełnia obszar */
+      display: block;
+    }
+
+    /* Opis pod zdjęciem */
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #1e293b;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    
+    <!-- Zdjęcie 1 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=1" alt="Zdjęcie 1">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 1</h3>
+        <p>Opis pierwszego kadr przedstawiający przykładową grafikę lub fotografię w galerii.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 2 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=2" alt="Zdjęcie 2">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 2</h3>
+        <p>Krótki opis drugiego elementu galerii umieszczony pod spodem zdjęcia.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 3 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=3" alt="Zdjęcie 3">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 3</h3>
+        <p>Trzecie zdjęcie z serii w pierwszym rzędzie układu siatki galerii.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 4 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=4" alt="Zdjęcie 4">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 4</h3>
+        <p>Opis rozpoczynający drugi rząd galerii zdjęć i szczegółów.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 5 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=5" alt="Zdjęcie 5">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 5</h3>
+        <p>Piąty element siatki, stanowiący środek całej galerii zdjęć.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 6 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=6" alt="Zdjęcie 6">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 6</h3>
+        <p>Szósta karta ze zdjęciem kończąca drugi rząd układu galerii.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 7 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=7" alt="Zdjęcie 7">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 7</h3>
+        <p>Siódmego element z opisem umieszczony w ostatnim, trzecim wierszu.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 8 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=8" alt="Zdjęcie 8">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 8</h3>
+        <p>Przedostatnia karta w galerii zawierająca podgląd i opis pod spodem.</p>
+      </div>
+    </div>
+
+    <!-- Zdjęcie 9 -->
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=9" alt="Zdjęcie 9">
+      <div class="card-content">
+        <h3>Tytuł zdjęcia 9</h3>
+        <p>Ostatnie zdjęcie zwięźle podsumowujące pełny układ siatki 3x3.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
