@@ -48,7 +48,19 @@
     grid-template-columns: repeat(4, 1fr);
 
 }
-
+.col_1 button{
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 100px;
+    justify-self: start;
+    margin-right: 5px;
+    background-image: radial-gradient(white 40%,black 100%);
+    border-radius: 100px;
+    width: 100%;
+    margin: auto;
+    min-height: 50px;
+    font-size: 40px;
+    border: solid 1px black;
+}
 .col_4 button{
     font-family: 'Times New Roman', Times, serif;
     border-radius: 100px;
@@ -61,7 +73,7 @@
     font-size: 20px;
     border: solid 1px black
 }
-.col_4 button:active{
+.col_4 button:active , .col_1 button:active{
     border: solid 1px white;
 }
 

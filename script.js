@@ -6,7 +6,7 @@ function press(button){
     let input = document.getElementById("screen")
     switch(sign){
         case "C":
-            input.value = input.value.slice(0,-1)
+            input.value = ""
             input.placeholder = ""
             break
         case "=":
@@ -19,6 +19,11 @@ function press(button){
                 input.value = ""
                 input.placeholder =  "Wrong input"
                 return;
+            }
+            if (result === undefined) {
+                input.value = ""
+                input.placeholder = "Wrong input"
+                return
             }
             input.value = ""
             input.placeholder =  "=" + result
