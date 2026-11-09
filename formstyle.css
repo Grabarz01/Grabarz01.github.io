@@ -1,10 +1,11 @@
-/* Reset podstawowych styli */
+
 * {
-    box-sizing: border-box; /*wlicza padding i border do deklarowanej szerokości*/
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 body {
     background-color: #f0f2f5;
